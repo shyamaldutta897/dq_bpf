@@ -1,0 +1,39 @@
+{
+    "table":"nyc_taxi",
+    "rules":[
+    {
+        "column":"VendorID",
+        "check":"Vendor ID is empty or Vendor ID is String.",
+        "threshold":0.98 
+    },
+
+    {
+        "column":"tpep_pickup_datetime",
+        "check":"Pickup datetime is missing or invalid datetime",
+        "threshold":0.98 
+    },
+
+    {
+        "column":"tpep_dropoff_datetime",
+        "check":"Dropoff datetime is missing or invalid datetime",
+        "threshold":0.98 
+    },
+
+    {
+        "column":"passenger_count",
+        "check":"Paseenger count is null",
+        "threshold":0.98 
+    },
+
+    {
+        "column":"fare_amount",
+        "check":"Fare amount is negative",
+        "threshold":0.98 
+    }
+
+    
+
+
+
+]
+}
