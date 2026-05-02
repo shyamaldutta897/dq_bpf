@@ -1,32 +1,33 @@
 {
     "table":"nyc_taxi",
-    "rules":[ 
-    {
-        "columns":["VendorID","tpep_pickup_datetime","tpep_dropoff_datetime","passenger_count"],
-        "type":"not_null",
-        "check":"Vendor ID is empty or Vendor ID is String.",
-        "threshold":0.98 
-    },
+    "rules":
+    [
+        {
+            "columns":["VendorID","tpep_pickup_datetime","tpep_dropoff_datetime","passenger_count"],
+            "type":"not_null",
+            "check":"Vendor ID is empty or Vendor ID is String.",
+            "threshold":0.98 
+        },
 
-    {
-        "column":["passenger_count","fare_amount","trip_distance","payment_type","total_amount"],
-        "type":"negative_amount",
-        "check":"Fare amount is negative",
-        "threshold":0.98 
-    },
+        {
+            "columns":["passenger_count","fare_amount","trip_distance","payment_type","total_amount"],
+            "type":"negative_amount",
+            "check":"Fare amount is negative",
+            "threshold":0.98 
+        },
 
-    {
-        "column":["VendorID","PULocationID","DOLocationID"],
-        "type":"num_check",
-        "check":"Field data type is not int",
-        "threshold":0.98 
-    },
+        {
+            "columns":["VendorID","PULocationID","DOLocationID"],
+            "type":"num_check",
+            "check":"Field data type is not int",
+            "threshold":0.98 
+        },
 
-    {
-        "column":["trip_distance","fare_amount","extra","mta_tax","tip_amount","tolls_amount","improvement_surcharge","total_amount","congestion_surcharge","Airport_fee","cbd_congestion_fee"],
-        "type":"double_check",
-        "check":"Field data type is not int",
-        "threshold":0.98 
-    }
+        {
+            "columns":["trip_distance","fare_amount","extra","mta_tax","tip_amount","tolls_amount","improvement_surcharge","total_amount","congestion_surcharge","Airport_fee","cbd_congestion_fee"],
+            "type":"double_check",
+            "check":"Field data type is not int",
+            "threshold":0.98 
+        }
 ]
 }

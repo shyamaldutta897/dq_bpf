@@ -1,4 +1,7 @@
 
+import sys
+sys.path.append("D:/DQ_framework")
+
 from dq_checks.not_null import check_not_null
 from dq_checks.negative_amount import check_fare_amount
 from dq_checks.int_check import int_check
@@ -21,6 +24,17 @@ def run_checks(df,config_path):
         func=check_map[rule["type"]]
         for column in rule["columns"]:
             func(df,column)
+
+
+
+
+
+
+
+
+
+
+
    
 
 
