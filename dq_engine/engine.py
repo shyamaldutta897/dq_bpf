@@ -20,7 +20,7 @@ def run_checks(df,config_path):
     }
 
 
-    for rule in rules:
+    for rule in rules['rules']:
         func=check_map[rule["type"]]
         for column in rule["columns"]:
             func(df,column)
