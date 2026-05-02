@@ -5,10 +5,10 @@ def check_not_null(df,column):
     failed=df.filter(col(column).isNull()).count()
 
     return{
-          'field':col,
+          'field':column,
           'total_rows':total_rows,
           'failed_rows':failed,
           'percentage':(failed/total_rows)  
-          } 
+          }  
 
 

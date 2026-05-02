@@ -9,6 +9,6 @@ def check_fare_amount(df,column):
           'total_rows':total_rows,
           'failed_rows':failed,
           'percentage':(failed/total_rows)  
-          }
+          } 
 
 
