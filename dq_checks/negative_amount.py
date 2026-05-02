@@ -1,8 +1,8 @@
 from pyspark.sql.functions import *
 
-def check_fare_amount(df,col):
+def check_fare_amount(df,column):
     total_rows=df.count()
-    failed=df.filter(col<0).count()
+    failed=df.filter(column<0).count()
 
     return{
           'field':col,

@@ -1,8 +1,8 @@
 from pyspark.sql.functions import *
 
-def check_not_null(df,col):
+def check_not_null(df,column):
     total_rows=df.count()
-    failed=df.filter(col(col).isNull()).count()
+    failed=df.filter(col(column).isNull()).count()
 
     return{
           'field':col,
