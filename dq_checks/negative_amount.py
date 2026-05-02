@@ -5,7 +5,7 @@ def check_fare_amount(df,column):
     failed=df.filter(column<0).count()
 
     return{
-          'field':col,
+          'field':column,
           'total_rows':total_rows,
           'failed_rows':failed,
           'percentage':(failed/total_rows)  
