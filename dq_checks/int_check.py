@@ -10,6 +10,6 @@ def int_check(df,column):
         "total_rows":total,
         "failed_rows":failed,
         "percentage":failed/total
-    } 
+    }  
 
     
