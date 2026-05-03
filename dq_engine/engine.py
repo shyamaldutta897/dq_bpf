@@ -24,8 +24,7 @@ def run_checks(df,config_path):
     for rule in rules['rules']:
         func=check_map[rule["type"]]
         for column in rule["columns"]:
-            op=func(df,column)
-            result.append(op)
+            result.append(func(df,column))
     return result
 
 
