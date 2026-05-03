@@ -2,7 +2,7 @@ from pyspark.sql.functions import *
 
 def int_check(df,column):
     total=df.count()
-    failed=df.filter(typeof(column)!="int").count()
+    failed=df.filter(typeof(column).cast(str)!="double").count()
 
     return
     {   "field":column,
