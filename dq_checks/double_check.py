@@ -6,8 +6,8 @@ def double_check(df,column):
 
     failed=df.filter((col(column).isNotNull())& (col(column).cast('double').isNull())).count()
 
-    return
-    {   "field":column,
+    return{
+        "field":column,
         "check":"Datatype - double",
         "total_rows":total,
         "failed_rows":failed,
