@@ -7,6 +7,7 @@ def check_fare_amount(df,column):
 
     return{
           'field':column,
+          'check':'Negative value',
           'total_rows':total_rows,
           'failed_rows':failed,
           'percentage':(failed/total_rows)  

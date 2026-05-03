@@ -6,9 +6,10 @@ def double_check(df,column):
 
     return
     {   "field":column,
+        "check":"Datatype - double",
         "total_rows":total,
         "failed_rows":failed,
         "percentage":failed/total
-    } 
+    }  
 
     

@@ -6,6 +6,7 @@ def check_not_null(df,column):
 
     return{
           'field':column,
+          'check':'Not null',
           'total_rows':total_rows,
           'failed_rows':failed,
           'percentage':(failed/total_rows)  
