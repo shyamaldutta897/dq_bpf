@@ -19,11 +19,22 @@ def run_checks(df,config_path):
         "double_check":double_check
     }
 
+    result=[]
 
     for rule in rules['rules']:
         func=check_map[rule["type"]]
         for column in rule["columns"]:
-            func(df,column)
+            op=func(df,column)
+            result.append(op)
+    return result
+
+
+
+
+
+     
+    
+
 
 
 
